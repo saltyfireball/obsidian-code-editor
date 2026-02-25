@@ -1,0 +1,24 @@
+{
+	"name": "obsidian-code-editor",
+	"version": "1.0.0",
+	"description": "Edit non-markdown text files directly in Obsidian with syntax highlighting.",
+	"main": "main.js",
+	"type": "module",
+	"scripts": {
+		"dev": "node esbuild.config.mjs",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"version": "node version-bump.mjs && git add manifest.json versions.json"
+	},
+	"keywords": ["obsidian", "plugin", "code", "editor", "syntax-highlighting"],
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^16.11.6",
+		"esbuild": "0.25.5",
+		"tslib": "2.4.0",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"obsidian": "latest",
+		"highlight.js": "^11.11.0"
+	}
+}

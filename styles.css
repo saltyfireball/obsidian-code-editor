@@ -1,0 +1,109 @@
+/* ========================================
+   CODE EDITOR STYLES
+   ======================================== */
+
+.ce-editor-view {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.ce-editor-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+/* CodeMirror editor styling */
+.ce-editor-container .cm-editor {
+	height: 100%;
+	flex: 1;
+}
+
+.ce-editor-container .cm-editor,
+.ce-editor-container .cm-editor * {
+	font-family: var(--font-monospace) !important;
+	font-feature-settings:
+		"calt" 1,
+		"liga" 1,
+		"dlig" 0,
+		"ss01" 1,
+		"ss02" 1,
+		"ss03" 1,
+		"ss04" 1,
+		"ss05" 1,
+		"ss06" 1,
+		"ss07" 1,
+		"ss08" 1,
+		"ss09" 1 !important;
+}
+
+.ce-editor-container .cm-scroller {
+	overflow: auto;
+}
+
+.ce-editor-container .cm-content {
+	padding: 8px 0;
+}
+
+.ce-editor-container .cm-line {
+	padding: 0 8px;
+}
+
+.ce-editor-container .cm-lineNumbers .cm-gutterElement {
+	text-align: right;
+	padding: 0 8px;
+	min-width: 3ch;
+}
+
+/* Binary file warning */
+.ce-editor-binary {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.ce-binary-warning {
+	padding: 20px 30px;
+	background: var(--background-modifier-error);
+	border-radius: 8px;
+	color: var(--text-normal);
+	font-size: var(--font-ui-medium);
+}
+
+/* Settings styles */
+.ce-hint {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.ce-extension-list {
+	padding: 12px;
+	background: var(--background-secondary);
+	border-radius: 6px;
+	margin: 10px 0;
+}
+
+.ce-extension-list code {
+	word-break: break-word;
+	line-height: 1.6;
+}
+
+.ce-status {
+	margin-top: 20px;
+	padding: 12px;
+	border-radius: 6px;
+	text-align: center;
+}
+
+.ce-status.ce-enabled {
+	background: rgba(var(--color-green-rgb), 0.15);
+	color: var(--text-success);
+}
+
+.ce-status.ce-disabled {
+	background: var(--background-secondary);
+	color: var(--text-muted);
+}
