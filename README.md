@@ -24,7 +24,7 @@ Edit non-markdown text files (code, config, data files) directly in Obsidian wit
 
 ### From Obsidian Community Plugins
 
-**Not yet submitted**
+**Might not be approved yet**
 
 1. Open **Settings** > **Community Plugins**
 2. Search for **Code Editor**
