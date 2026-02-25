@@ -1,7 +1,7 @@
 {
 	"id": "code-editor",
 	"name": "Code Editor",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"minAppVersion": "1.0.0",
 	"description": "Edit non-markdown text files (code, config, data) directly in Obsidian with syntax highlighting, line numbers, and word wrap.",
 	"author": "saltyfireball",
