@@ -104,6 +104,13 @@ export class CodeEditorSettingTab extends PluginSettingTab {
 			cls: "ce-code-inline",
 		});
 
+		// Attribution
+		const attrEl = containerEl.createDiv("ce-attribution");
+		attrEl.innerHTML =
+			"Syntax highlighting powered by "
+			+ '<a href="https://github.com/highlightjs/highlight.js">highlight.js</a>'
+			+ " (BSD 3-Clause License).";
+
 		// Status indicator
 		if (settings.enabled) {
 			const statusEl = containerEl.createDiv("ce-status ce-enabled");

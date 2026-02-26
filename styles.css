@@ -107,3 +107,13 @@
 	background: var(--background-secondary);
 	color: var(--text-muted);
 }
+
+.ce-attribution {
+	margin-top: 16px;
+	font-size: 0.8em;
+	color: var(--text-muted);
+}
+
+.ce-attribution a {
+	color: var(--text-accent);
+}

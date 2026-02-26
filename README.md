@@ -65,6 +65,10 @@ Once enabled, the plugin automatically handles supported file types. Simply open
 
 - **Open current file in Code Editor** - Available from the command palette for non-markdown files
 
+## Acknowledgments
+
+This plugin uses [highlight.js](https://github.com/highlightjs/highlight.js) for syntax highlighting, licensed under the [BSD 3-Clause License](https://github.com/highlightjs/highlight.js/blob/main/LICENSE). Copyright (c) 2006, Ivan Sagalaev.
+
 ## License
 
 [MIT](LICENSE)
