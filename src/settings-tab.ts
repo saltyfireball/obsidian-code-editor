@@ -15,9 +15,9 @@ export class CodeEditorSettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 		containerEl.empty();
 
-		new Setting(containerEl).setName("Code editor").setHeading();
+		;
 		containerEl.createEl("p", {
-			text: "Edit non-markdown text files (code, config, etc.) directly in Obsidian with syntax highlighting.",
+			text: "Edit text files directly in your vault with syntax highlighting.",
 			cls: "ce-hint",
 		});
 
@@ -40,9 +40,9 @@ export class CodeEditorSettingTab extends PluginSettingTab {
 			.setDesc("Syntax highlighting color theme. Requires file reopen to apply.")
 			.addDropdown((dropdown) =>
 				dropdown
-					.addOption("monokai-pro", "Monokai Pro")
-					.addOption("github-dark", "GitHub Dark")
-					.addOption("github-light", "GitHub Light")
+					.addOption("monokai-pro", "Monokai pro")
+					.addOption("github-dark", "GitHub dark")
+					.addOption("github-light", "GitHub light")
 					.addOption("dracula", "Dracula")
 					.addOption("nord", "Nord")
 					.setValue(settings.theme)
@@ -80,7 +80,7 @@ export class CodeEditorSettingTab extends PluginSettingTab {
 			.setDesc("Comma-separated list of additional file extensions to handle (e.g., 'vue,svelte,astro'). Requires restart.")
 			.addTextArea((text) =>
 				text
-					.setPlaceholder("vue, svelte, astro")
+					.setPlaceholder("For example: vue, svelte")
 					.setValue(settings.additionalExtensions.join(", "))
 					.onChange(async (value) => {
 						settings.additionalExtensions = value
@@ -106,10 +106,12 @@ export class CodeEditorSettingTab extends PluginSettingTab {
 
 		// Attribution
 		const attrEl = containerEl.createDiv("ce-attribution");
-		attrEl.innerHTML =
-			"Syntax highlighting powered by "
-			+ '<a href="https://github.com/highlightjs/highlight.js">highlight.js</a>'
-			+ " (BSD 3-Clause License).";
+		attrEl.setText("Syntax highlighting powered by ");
+		attrEl.createEl("a", {
+			text: "Highlight.js",
+			href: "https://github.com/highlightjs/highlight.js",
+		});
+		attrEl.appendText(" (BSD 3-clause license).");
 
 		// Status indicator
 		if (settings.enabled) {

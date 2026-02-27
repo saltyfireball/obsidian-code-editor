@@ -29,8 +29,8 @@ export default class CodeEditorPlugin extends Plugin {
 
 		// Command to open current file in code editor
 		this.addCommand({
-			id: "open-in-code-editor",
-			name: "Open current file in Code Editor",
+			id: "open-current-file",
+			name: "Open current file",
 			checkCallback: (checking) => {
 				const file = this.app.workspace.getActiveFile();
 				if (!file || file.extension === "md") {
@@ -38,7 +38,7 @@ export default class CodeEditorPlugin extends Plugin {
 				}
 				if (!checking) {
 					const leaf = this.app.workspace.getLeaf(false);
-					leaf.setViewState({
+					void leaf.setViewState({
 						type: CODE_EDITOR_VIEW_TYPE,
 						state: { file: file.path },
 					});
@@ -49,6 +49,7 @@ export default class CodeEditorPlugin extends Plugin {
 	}
 
 	async loadSettings() {
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- loadData returns any
 		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
 	}
 

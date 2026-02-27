@@ -41,10 +41,10 @@ function resolveStyle(
 
 	// Check combined overrides first
 	for (let i = 0; i < combinedOverrides.length; i++) {
-		const override = combinedOverrides[i]!;
+		const override = combinedOverrides[i];
 		let allMatch = true;
 		for (let j = 0; j < override.match.length; j++) {
-			if (classes.indexOf(override.match[j]!) === -1) {
+			if (classes.indexOf(override.match[j]) === -1) {
 				allMatch = false;
 				break;
 			}
@@ -58,7 +58,7 @@ function resolveStyle(
 	// Check individual classes
 	if (!resolved) {
 		for (let i = 0; i < classes.length; i++) {
-			const s = styleMap[classes[i]!];
+			const s = styleMap[classes[i]];
 			if (s) {
 				resolved = s;
 				break;
@@ -103,7 +103,7 @@ function buildHighlightDecorations(
 	const tokens = highlightToTokens(code, language, true);
 
 	for (let t = 0; t < tokens.length; t++) {
-		const token = tokens[t]!;
+		const token = tokens[t];
 		const tokenFrom = token.offset;
 		const tokenTo = tokenFrom + token.length;
 

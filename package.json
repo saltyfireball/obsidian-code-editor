@@ -23,12 +23,15 @@
 		"@codemirror/state": "6.5.0",
 		"@codemirror/view": "6.38.6",
 		"@types/node": "^16.11.6",
+		"@typescript-eslint/parser": "^8.56.1",
 		"esbuild": "0.25.5",
+		"eslint": "^9.39.3",
+		"eslint-plugin-obsidianmd": "^0.1.9",
 		"tslib": "2.4.0",
 		"typescript": "^5.8.3"
 	},
 	"dependencies": {
-		"obsidian": "latest",
-		"highlight.js": "^11.11.0"
+		"highlight.js": "^11.11.0",
+		"obsidian": "latest"
 	}
 }

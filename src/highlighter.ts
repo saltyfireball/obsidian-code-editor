@@ -22,6 +22,7 @@ export function highlightToTokens(
 ): HighlightToken[] {
 	const html = highlightCode(code, language, autoDetect);
 	const container = document.createElement("div");
+	// eslint-disable-next-line @microsoft/sdl/no-inner-html -- parsing highlight.js HTML output into tokens
 	container.innerHTML = html;
 
 	const tokens: HighlightToken[] = [];
