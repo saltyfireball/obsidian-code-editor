@@ -15,7 +15,7 @@ export class CodeEditorSettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 		containerEl.empty();
 
-		containerEl.createEl("h2", { text: "Code Editor" });
+		new Setting(containerEl).setName("Code editor").setHeading();
 		containerEl.createEl("p", {
 			text: "Edit non-markdown text files (code, config, etc.) directly in Obsidian with syntax highlighting.",
 			cls: "ce-hint",
@@ -92,7 +92,7 @@ export class CodeEditorSettingTab extends PluginSettingTab {
 			);
 
 		// Show built-in extensions
-		containerEl.createEl("h3", { text: "Built-in Extensions" });
+		new Setting(containerEl).setName("Built-in extensions").setHeading();
 		containerEl.createEl("p", {
 			text: "The following extensions are supported by default:",
 			cls: "ce-hint",
