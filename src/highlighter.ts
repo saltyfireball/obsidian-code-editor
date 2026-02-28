@@ -21,9 +21,8 @@ export function highlightToTokens(
 	autoDetect: boolean
 ): HighlightToken[] {
 	const html = highlightCode(code, language, autoDetect);
-	const container = document.createElement("div");
-	// eslint-disable-next-line @microsoft/sdl/no-inner-html -- parsing highlight.js HTML output into tokens
-	container.innerHTML = html;
+	const parsed = new DOMParser().parseFromString(`<pre>${html}</pre>`, "text/html");
+	const container = parsed.body.firstElementChild;
 
 	const tokens: HighlightToken[] = [];
 	let offset = 0;
@@ -45,7 +44,7 @@ export function highlightToTokens(
 			return;
 		}
 		if (node.nodeType === Node.ELEMENT_NODE) {
-			const el = node as HTMLElement;
+			const el = node as Element;
 			const classes = [...inheritedClasses];
 			Array.from(el.classList).forEach((cls) => {
 				if (!classes.includes(cls)) {
@@ -58,9 +57,11 @@ export function highlightToTokens(
 		}
 	}
 
-	Array.from(container.childNodes).forEach((child) => {
-		walk(child, []);
-	});
+	if (container) {
+		Array.from(container.childNodes).forEach((child) => {
+			walk(child, []);
+		});
+	}
 
 	return tokens;
 }
