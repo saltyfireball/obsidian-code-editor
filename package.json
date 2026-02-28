@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-code-editor",
-	"version": "1.0.6",
+	"version": "1.1.0",
 	"description": "Edit non-markdown text files directly in Obsidian with syntax highlighting.",
 	"main": "main.js",
 	"type": "module",

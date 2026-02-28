@@ -1,7 +1,7 @@
 {
 	"id": "code-editor",
 	"name": "Code Editor",
-	"version": "1.0.6",
+	"version": "1.1.0",
 	"minAppVersion": "1.0.0",
 	"description": "Edit non-markdown text files (code, config, data) directly with syntax highlighting, line numbers, and word wrap.",
 	"author": "saltyfireball",
