@@ -182,6 +182,7 @@ export class CodeEditorView extends TextFileView {
 	}
 
 	async onOpen(): Promise<void> {
+		await super.onOpen();
 		const container = this.contentEl;
 		container.empty();
 		container.addClass("ce-editor-view");
@@ -266,6 +267,7 @@ export class CodeEditorView extends TextFileView {
 	}
 
 	async onClose(): Promise<void> {
+		await super.onClose();
 		if (this.editorView) {
 			this.editorView.destroy();
 			this.editorView = null;
