@@ -26,6 +26,8 @@ Edit non-markdown text files (code, config, data files) directly in Obsidian wit
 
 This plugin is available in the official Obsidian community plugin directory. Install it from **Settings > Community plugins > Browse** and search for "Code Editor" or "Code Editor by saltyfireball".
 
+Community plugin page: <https://community.obsidian.md/plugins/code-editor>
+
 ## Usage
 
 Once enabled, the plugin automatically handles supported file types. Simply open any supported file and it will open in the code editor.
