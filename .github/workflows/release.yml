@@ -12,6 +12,10 @@ on:
 
 permissions:
   contents: write
+  # Required so actions/attest-build-provenance can generate and publish
+  # Sigstore attestations linked to the released artifacts.
+  id-token: write
+  attestations: write
 
 jobs:
   build:
@@ -31,6 +35,14 @@ jobs:
         run: |
           npm install
           npm run build
+
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: |
+            main.js
+            manifest.json
+            styles.css
 
       - name: Create Release
         env:

@@ -21,9 +21,12 @@
 	flex: 1;
 }
 
-.ce-editor-container .cm-editor,
-.ce-editor-container .cm-editor * {
-	font-family: var(--font-monospace) !important;
+/* Doubled class selector raises specificity to (0,3,1), enough to win
+   over Obsidian's built-in editor font rules without resorting to
+   !important. */
+.ce-editor-container.ce-editor-container .cm-editor,
+.ce-editor-container.ce-editor-container .cm-editor * {
+	font-family: var(--font-monospace);
 	font-feature-settings:
 		"calt" 1,
 		"liga" 1,
@@ -36,7 +39,7 @@
 		"ss06" 1,
 		"ss07" 1,
 		"ss08" 1,
-		"ss09" 1 !important;
+		"ss09" 1;
 }
 
 .ce-editor-container .cm-scroller {

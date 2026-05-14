@@ -33,5 +33,11 @@
 	"dependencies": {
 		"highlight.js": "^11.11.0",
 		"obsidian": "latest"
+	},
+	"overrides": {
+		"flatted": "^3.4.0",
+		"picomatch": "^4.0.4",
+		"brace-expansion": "^2.0.3",
+		"yaml": "^2.6.0"
 	}
 }

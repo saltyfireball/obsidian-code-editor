@@ -116,10 +116,10 @@ export class CodeEditorSettingTab extends PluginSettingTab {
 		// Status indicator
 		if (settings.enabled) {
 			const statusEl = containerEl.createDiv("ce-status ce-enabled");
-			statusEl.createEl("span", { text: "Code editor is active", cls: "ce-status-text" });
+			statusEl.createSpan({ text: "Code editor is active", cls: "ce-status-text" });
 		} else {
 			const statusEl = containerEl.createDiv("ce-status ce-disabled");
-			statusEl.createEl("span", { text: "Code editor is disabled", cls: "ce-status-text" });
+			statusEl.createSpan({ text: "Code editor is disabled", cls: "ce-status-text" });
 		}
 	}
 }
