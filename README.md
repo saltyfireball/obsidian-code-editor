@@ -28,6 +28,10 @@ This plugin is available in the official Obsidian community plugin directory. In
 
 Community plugin page: <https://community.obsidian.md/plugins/code-editor>
 
+## More Plugins by saltyfireball
+
+Browse all of my published Obsidian plugins on my profile: <https://community.obsidian.md/users/saltyfireball>
+
 ## Usage
 
 Once enabled, the plugin automatically handles supported file types. Simply open any supported file and it will open in the code editor.
